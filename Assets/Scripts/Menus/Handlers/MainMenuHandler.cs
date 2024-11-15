@@ -29,7 +29,8 @@ public class MainMenuHandler : MonoBehaviour
     /// </summary>
     public void onClickLeaderBoard()
     {
-        MenuManager.Instance.showPopup();
+        GameManager.Instance.switchState(GameState.LEADERBOARD);
+        //MenuManager.Instance.showPopup();
     }
 
     /// <summary>
@@ -61,7 +62,8 @@ public class MainMenuHandler : MonoBehaviour
     /// </summary>
     public void onClickShop()
     {
-        MenuManager.Instance.showPopup();
+        GameManager.Instance.switchState(GameState.SHOP);
+        //MenuManager.Instance.showPopup();
     }
 
     /// <summary>
@@ -69,7 +71,8 @@ public class MainMenuHandler : MonoBehaviour
     /// </summary>
     public void onClickDailyRewards()
     {
-        MenuManager.Instance.showPopup();
+        GameManager.Instance.switchState(GameState.DAILYREWARDS);
+        //MenuManager.Instance.showPopup();
     }
 
     /// <summary>

@@ -14,7 +14,8 @@ public enum GameState
     GAMEPLAY,
     PAUSE,
     WIN,
-    LOOSE
+    LOOSE,
+    DAILYREWARDS
 }
 
 public class GameManager : Singleton<GameManager>

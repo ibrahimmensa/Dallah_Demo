@@ -12,6 +12,9 @@ public class MenuManager : Singleton<MenuManager>
     public PauseMenuHandler pauseMenuHandler;
     public SplashHandler splashHandler;
     public PopupHandler popupHandler;
+    public DailyRewardsHandler dailyRewardsHandler;
+    public LeaderBoardHandler leaderBoardHandler;
+    public ShopHandler shopHandler;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +47,9 @@ public class MenuManager : Singleton<MenuManager>
         gamePlayUIHandler.gameObject.SetActive(false);
         pauseMenuHandler.gameObject.SetActive(false);
         splashHandler.gameObject.SetActive(false);
+        dailyRewardsHandler.gameObject.SetActive(false);
+        leaderBoardHandler.gameObject.SetActive(false);
+        shopHandler.gameObject.SetActive(false);
     }
 
     /// <summary>
@@ -61,6 +67,7 @@ public class MenuManager : Singleton<MenuManager>
                 gamePlayUIHandler.gameObject.SetActive(true);
                 break;
             case GameState.LEADERBOARD:
+                leaderBoardHandler.gameObject.SetActive(true);
                 break;
             case GameState.LOOSE:
                 break;
@@ -76,11 +83,16 @@ public class MenuManager : Singleton<MenuManager>
                 settingsHandler.gameObject.SetActive(true);
                 break;
             case GameState.SHOP:
+                shopHandler.gameObject.SetActive(true);
                 break;
             case GameState.SPLASH:
                 splashHandler.gameObject.SetActive(true);
                 break;
             case GameState.WIN:
+                break;
+            case GameState.DAILYREWARDS:
+                dailyRewardsHandler
+                    .gameObject.SetActive(true);
                 break;
         }
     }
